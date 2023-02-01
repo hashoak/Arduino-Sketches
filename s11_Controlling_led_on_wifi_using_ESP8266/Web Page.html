@@ -1,0 +1,25 @@
+<!DOCTYPE html>      
+<html>      
+<head>      
+    <title>Smart Home System</title>      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>      
+</head>      
+<body style="background-color: seagreen; color: seashell; text-align: center;">      
+    <h1> Smart Home Control Panel</h1>                                     
+    <h4>This is Ashok's smart LED control</h4>
+    <img src="https://wallpaperaccess.com/full/85814.jpg" width="400px" height="400px">      
+    <br>      
+    <button style="margin: 10px;" id="111" class="button">LAMP ON</button>      
+    <br>      
+    <button style="margin:10px;" id="110" class="button"> LAMP OFF</button>      
+        <script>                                                        //starting Javascript.      
+        $(".button").click(function () {                            //if any button from the ".button" class is clicked      
+            var p = $(this).attr('id');                             //get this button id and store it inside the "p" variable.      
+            pin: p                                                  //a dictionary contains the button id to get sent to the web server.      
+            $.get("http://192.168.29.96:80/", {                      //then send a get request to the web server"http://192.168.1.4:80/" (":80" means port number 80) with some data in a form of dictionary {pin: p} which is the butoon id. IMPORTANT NOTE: DON'T FORGET TO CHANGE THE IP ADDRESS WITH YOUR ESP8266 NEW IP ADDRESS.      
+            pin: p      
+            });      
+        });      
+    </script>      
+</body>      
+</html>
