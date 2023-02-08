@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>LearnCodeOnline</title>
+  </head>
+  <style>
+    body {
+      background: rgb(66, 66, 66);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .color {
+      width: 120px;
+      height: 30px;
+      border-radius: 5%;
+      margin-bottom: 30px;
+    }
+  </style>
+  <body>
+    <div class='color-hover'>
+      <div
+        style='cursor: pointer; background-color: red'
+        class='color'
+        name='color'
+      ></div>
+      <div
+        style='cursor: pointer; background-color: green'
+        class='color'
+        name='color'
+      ></div>
+      <div
+        style='cursor: pointer; background-color: yellow'
+        class='color'
+        name='color'
+      ></div>
+      <div
+        style='cursor: pointer; background-color: blue'
+        class='color'
+        name='color'
+      ></div>
+      <div
+        style='cursor: pointer; background-color: pink'
+        class='color'
+        name='color'
+      >
+        <p style='text-align: center'>Dj Dengu</p>
+      </div>
+      <div
+        style='cursor: pointer; background-color: orange'
+        class='color'
+        name='color'
+      >
+        <p style='text-align: center'>Apey puka</p>
+      </div>
+    </div>
+    <script>
+      let color = document.getElementsByName('color');
+      color.forEach((ele) => {
+        ele.addEventListener('mouseover', () => {
+          if (ele.style.backgroundColor == 'pink') {
+            location.href = '/pataPadu';
+            return;
+          }
+          if (ele.style.backgroundColor == 'orange') {
+            location.href = '/apuPuka';
+            return;
+          }
+          location.href = `/${ele.style.backgroundColor}`;
+        });
+      });
+    </script>
+  </body>
+</html>
