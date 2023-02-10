@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>OnlineChatServer</title>
+    </head>
+    <style>
+        body {
+            overflow: hidden;
+            height: 100vw;
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(54, 54, 54);
+        }
+        .top {
+            height: 50px;
+            display: flex;
+            background: rgb(255, 108, 108);
+            color: aliceblue;
+            justify-content: center;
+        }
+        h1 {
+            margin: 0;
+            align-self: center;
+        }
+        .conv {
+            display: flex;
+            padding: 0 20px 0 20px;
+            margin: 20px 0 10px 0;
+            overflow-y: scroll;
+            height: 450px;
+            color: aliceblue;
+            align-self: left;
+            flex-direction: column;
+            font-family: Consolas, "Courier New", monospace;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #666;
+            border-radius: 30px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: white;
+            border-radius: 30px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(skyblue, yellowgreen);
+        }
+        .text {
+            display: block;
+            width: auto;
+            max-width: 80%;
+            height: auto;
+            padding: 10px;
+            margin: 3px;
+        }
+        .left {
+            align-self: flex-start;
+            text-align: right;
+            background-color: rgb(69, 69, 69);
+        }
+        .right {
+            align-self: flex-end;
+            text-align: right;
+            background-color: rgb(41, 105, 255);
+        }
+        .message {
+            display: flex;
+            text-align: center;
+            height: 50px;
+            padding: 2.5px;
+            display: flex;
+            justify-content: center;
+        }
+        .in {
+            width: 500px;
+            height: 45px;
+        }
+        .send {
+            font-size: small;
+            font-weight: bold;
+            color: whitesmoke;
+            background-color: lightseagreen;
+            border-color: red;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        #rcv {
+            font-size: xx-small;
+            color: red;
+        }
+    </style>
+    <body>
+        <div class="top">
+            <h1>HASH's Chat Room</h1>
+        </div>
+        <div class="conv">
+            <div class="text left">Hi client!</div>
+            <div class="text right">Hi server!</div>
+        </div>
+        <div class="message">
+            <form>
+                <input
+                    class="in"
+                    type="textarea"
+                    name="msg"
+                    placeholder="Write a message..."
+                />
+                <button class="send" type="submit">Snd</button>
+            </form>
+        </div>
+    </body>
+</html>
