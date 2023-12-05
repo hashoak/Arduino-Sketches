@@ -108,28 +108,28 @@ void setup() {
   pinMode(ledPin, OUTPUT);
   digitalWrite(ledPin, 0);
 
-  // Initialize Wi-Fi Access Point
-  //  Serial.println();
-  //  Serial.print("Configuring soft-AP: ");
-  //  Serial.println(WiFi.softAPConfig(local_IP, gateway, subnet) ? "Done" : "Failed!");
-  //  Serial.print("Setting soft-AP: ");
-  //  Serial.println(WiFi.softAP(ssid, password, 1, false, 8) ? "Ready" : "Failed!");
-  //  Serial.print("IP address of soft-AP: ");
-  //  Serial.println(WiFi.softAPIP());
+//   Initialize Wi-Fi Access Point
+    Serial.println();
+    Serial.print("Configuring soft-AP: ");
+    Serial.println(WiFi.softAPConfig(local_IP, gateway, subnet) ? "Done" : "Failed!");
+    Serial.print("Setting soft-AP: ");
+    Serial.println(WiFi.softAP(ssid, password, 1, false, 8) ? "Ready" : "Failed!");
+    Serial.print("IP address of soft-AP: ");
+    Serial.println(WiFi.softAPIP());
 
   // Initialize Wi-Fi Station
-  Serial.println();
+//  Serial.println();
 //  Serial.print("Configuring IP: ");
 //  Serial.println(WiFi.config(local_IP, gateway, subnet) ? "Done" : "Failed!");
-  Serial.printf("Connecting to %s ",ssid);
-  WiFi.begin(ssid, password);
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
-  }
-  Serial.println("\nConnection Successful!");
-  Serial.print("IP address of server: ");
-  Serial.println(WiFi.localIP());
+//  Serial.printf("Connecting to %s ",ssid);
+//  WiFi.begin(ssid, password);
+//  while (WiFi.status() != WL_CONNECTED) {
+//    delay(500);
+//    Serial.print(".");
+//  }
+//  Serial.println("\nConnection Successful!");
+//  Serial.print("IP address of server: ");
+//  Serial.println(WiFi.localIP());
   
   initWebSocket();
 

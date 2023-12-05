@@ -1,6 +1,6 @@
 #include "MQ135.h"
 
-const int MQ135pin=A7;
+const int MQ135pin=A1;
 const int led=3;
 MQ135 gasSensor = MQ135(MQ135pin);
 double ppm;
@@ -18,11 +18,11 @@ void loop()
   ppm=0;
   for(int i=0;i<n;i++)
   {
-    ppm+=gasSensor.getPPM();
+    ppm+=gasSensor.getCO2PPM();
     delay(1);
   }
   ppm/=n;
-  // Serial.println(ppm);
+  Serial.println(ppm);
   if(ppm>20000) digitalWrite(led,1);
   else digitalWrite(led,0);
 }

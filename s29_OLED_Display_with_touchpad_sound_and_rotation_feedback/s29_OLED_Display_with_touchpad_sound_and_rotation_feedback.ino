@@ -43,8 +43,8 @@ void setup()
 
   Wire.begin();
   mpu6050.begin();
-  mpu6050.calcGyroOffsets();
-  // mpu6050.calcGyroOffsets(true);
+  // mpu6050.calcGyroOffsets();
+  mpu6050.calcGyroOffsets(true);
 
   for(int i=0;i<8;i++)
   {
