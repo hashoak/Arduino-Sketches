@@ -8,9 +8,9 @@ int in1=A1;
 int in2=A2;
 int in3=A3;
 int out=2;
-int t=1;
-int ut=750;
-int lt=375;
+int t=10;
+int ut=550;
+int lt=275;
 float st=2;
 
 void setup() {
@@ -47,12 +47,12 @@ int x1,x2,x3;
 long s1,s2,s3;
 
 void loop() {
-  s1=analogRead(in1);
-  s2=analogRead(in2);
-  s3=analogRead(in3);
-  // s1=0,s2=0,s3=0;
-  // for(int i=0;i<t;i++) s1+=x1,s2+=x2,s3+=x3,delay(1);
-  // s1/=t,s2/=t,s3/=t;
+  // s1=analogRead(in1);
+  // s2=analogRead(in2);
+  // s3=analogRead(in3);
+  s1=0,s2=0,s3=0;
+  for(int i=0;i<t;i++) s1+=analogRead(in1),s2+=analogRead(in2),s3+=analogRead(in3),delay(1);
+  s1/=t,s2/=t,s3/=t;
   // Serial.print(s1);
   // Serial.print("\t");
   // Serial.print(s2);
