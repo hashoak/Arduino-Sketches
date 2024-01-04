@@ -71,10 +71,10 @@ void loop() {
     while(analogRead(inpin2)>lt) cursor();
     delay(wt);
   }
-  else if(i2>lt && o1<ut)
+  else if(i3>lt && o1<ut)
   {
     Serial.println("Right click");
-    Serial.printf("%d\t%d\n",i2,o1);
+    Serial.printf("%d\t%d\n",i3,o1);
     bleMouse.press(MOUSE_RIGHT);
     while(analogRead(inpin3)>lt) cursor();
     bleMouse.release(MOUSE_RIGHT);
