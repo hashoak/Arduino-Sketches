@@ -40,6 +40,7 @@ void setup() {
   Serial.println("Starting BLE...");
   bleMouse.begin();
   while(!bleMouse.isConnected()) delay(10);
+  Serial.println("BLE Connected...");
 }
 
 int i1,i2,i3,o1,o2;
