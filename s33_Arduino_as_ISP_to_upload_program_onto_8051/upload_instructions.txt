@@ -1,0 +1,17 @@
+Reference link: https://www.instructables.com/How-to-Program-8051-Using-Arduino/
+
+Upload the ArduinoISP program into the Arduino board
+Give the hardware connections for serial uploading
+Place AVR8051.conf file in "C:/" directory
+
+Command:
+"C:\Program Files (x86)\Arduino\hardware\tools\avr\bin\avrdude.exe" -C C:/AVR8051.conf -c stk500v1 -P COM5 -p 89s52/1 -b 19200 -U flash:w:"PATH":a
+
+Give the path of the .hex executable file in the PATH keyword of the command
+Change the com porn number COM5/4/... according to your setup
+
+Use softwares like Keil to generate the .hex file of the c program written
+
+Sample program, object file and hex file are given for interfacing ultrasonic sensor and 16x2 LCD display with 8051
+
+NOTE: All the required dependencies for the program to be uploaded on 8051 are not provided and to be managed by the user
