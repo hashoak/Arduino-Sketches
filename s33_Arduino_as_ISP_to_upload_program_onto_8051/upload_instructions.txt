@@ -7,11 +7,11 @@ Place AVR8051.conf file in "C:/" directory
 Command:
 "C:\Program Files (x86)\Arduino\hardware\tools\avr\bin\avrdude.exe" -C C:/AVR8051.conf -c stk500v1 -P COM5 -p 89s52/1 -b 19200 -U flash:w:"PATH":a
 
-Give the path of the .hex executable file in the PATH keyword of the command
+Give the directory of the .hex executable file in the PATH keyword of the command
 Change the com porn number COM5/4/... according to your setup
 
-Use softwares like Keil to generate the .hex file of the c program written
+Use software like Keil to generate the .hex file of the c program
 
-Sample program, object file and hex file are given for interfacing ultrasonic sensor and 16x2 LCD display with 8051
+Sample program, object file and hex file for interfacing ultrasonic sensor and 16x2 LCD display with 8051 are given
 
 NOTE: All the required dependencies for the program to be uploaded on 8051 are not provided and to be managed by the user
