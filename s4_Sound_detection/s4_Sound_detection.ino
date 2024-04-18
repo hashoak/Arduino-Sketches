@@ -1,6 +1,6 @@
 int soundSensor=18;
 int LED=LED_BUILTIN;
-boolean LEDStatus=false;
+boolean LEDStatus=LOW;
 
 void setup() {
   pinMode(soundSensor,INPUT);
@@ -11,19 +11,11 @@ void setup() {
 void loop()
 {
   int SensorData=analogRead(soundSensor);
-  if(SensorData>200)
+  if(SensorData>250)
   {
     Serial.println(SensorData);
-    if(LEDStatus==false)
-    {
-      LEDStatus=true;
-      digitalWrite(LED,HIGH);
-    }
-    else
-    {
-      LEDStatus=false;
-      digitalWrite(LED,LOW);
-    }
+    LEDStatus=!LEDStatus;
+    digitalWrite(LED,LEDStatus);
     delay(1000);
   }
- } 
+} 
