@@ -36,6 +36,7 @@ void loop() {
     delayMicroseconds(10);
     digitalWrite(trigPin,LOW);
     dist+=pulseIn(echoPin,HIGH)*0.034/2;
+    delay(38);
   }
   dist/=n;
   if(dist>0 && dist<=400)
