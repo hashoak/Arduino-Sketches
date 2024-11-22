@@ -6,9 +6,9 @@
 #include <themes2.h>
 
 unsigned long channel_num = 2001544;
-const char* api_key = "RM3WOOPOQHIUUKUA";
-const char* ssid = "hash test";
-const char* password = "idontknow";
+const char* api_key = "your API key";
+const char* ssid = "your SSID";
+const char* password = "your PASS";
 int led=D2;
 int speaker=D7;
 unsigned int value;
@@ -206,12 +206,18 @@ String SendHTML(void) {
   str += "<h1>ESP8266 with ThingSpeak Server</h1>\n";
   str += "<h3>Using Station(STA) Mode</h3>\n";
   str += "<h4>Select the song to play</h4>\n";
-  str += "<a class=\"button button-1\" href='#' onClick=\"changePrev('https://api.thingspeak.com/update?api_key=RM3WOOPOQHIUUKUA&field1=1')\">Pirates of the Carribean</a>\n";
-  str += "<a class=\"button button-2\" href='#' onClick=\"changePrev('https://api.thingspeak.com/update?api_key=RM3WOOPOQHIUUKUA&field1=2')\">Despacito</a>\n";
-  str += "<a class=\"button button-1\" href='#' onClick=\"changePrev('https://api.thingspeak.com/update?api_key=RM3WOOPOQHIUUKUA&field1=3')\">Crazy Frog</a>\n";
-  str += "<a class=\"button button-2\" href='#' onClick=\"changePrev('https://api.thingspeak.com/update?api_key=RM3WOOPOQHIUUKUA&field1=4')\">Mario theme</a>\n";
-  str += "<a class=\"button button-1\" href='#' onClick=\"changePrev('https://api.thingspeak.com/update?api_key=RM3WOOPOQHIUUKUA&field1=5')\">Titanic theme</a>\n";
-  str += "<a class=\"button button-2\" href='#' onClick=\"changePrev('https://api.thingspeak.com/update?api_key=RM3WOOPOQHIUUKUA&field1=6')\">Newn</a>\n";
+  str += "<a class=\"button button-1\" href='#' onClick=\"changePrev('https://api.thingspeak.com/update?api_key="
+  str += "&field1=1')\">Pirates of the Carribean</a>\n";
+  str += "<a class=\"button button-2\" href='#' onClick=\"changePrev('https://api.thingspeak.com/update?api_key="
+  str += "&field1=2')\">Despacito</a>\n";
+  str += "<a class=\"button button-1\" href='#' onClick=\"changePrev('https://api.thingspeak.com/update?api_key="
+  str += "&field1=3')\">Crazy Frog</a>\n";
+  str += "<a class=\"button button-2\" href='#' onClick=\"changePrev('https://api.thingspeak.com/update?api_key="
+  str += "&field1=4')\">Mario theme</a>\n";
+  str += "<a class=\"button button-1\" href='#' onClick=\"changePrev('https://api.thingspeak.com/update?api_key="
+  str += "&field1=5')\">Titanic theme</a>\n";
+  str += "<a class=\"button button-2\" href='#' onClick=\"changePrev('https://api.thingspeak.com/update?api_key="
+  str += "&field1=6')\">Newn</a>\n";
   str += "<script> let changePrev = (link) => { let current = window.location.href; window.location.href = link; window.location.href = current; };</script>";
   str += "</body>\n";
   str += "</html>\n";

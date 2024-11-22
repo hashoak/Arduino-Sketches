@@ -1,8 +1,8 @@
 #include <WiFiServer.h>
 #include <ESP8266WebServer.h>
 
-const char* ssid = "hash test";  //  your network SSID (name)
-const char* pass = "idontknow";  // your network password (use for WPA, or use as key for WEP)
+const char* ssid = "your SSID";  //  your network SSID (name)
+const char* pass = "your PASS";  // your network password (use for WPA, or use as key for WEP)
 
 int led = BUILTIN_LED;
 

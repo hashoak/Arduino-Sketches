@@ -6,8 +6,8 @@
 #include <FS.h>
 
 // Replace with your network credentials
-const char* ssid = "hash test";
-const char* password = "idontknow";
+const char* ssid = "your SSID";
+const char* password = "your PASS";
 
 const int ledPin = BUILTIN_LED;
 
