@@ -3,11 +3,11 @@
 #include <WiFiClientSecure.h>
 #include <ArduinoJson.h>
 
-const char *ssid = "hash test";
-const char *password = "idontknow";
+const char *ssid = "your SSID";
+const char *password = "your PASS";
 
-const char *apiToken = "akmyaxupfz613o3zecoq2o1r2fc5tn";
-const char *userToken = "uhx86xxfyz8hav3x8eqbjpxbpdb1cm";
+const char *apiToken = "your API token";
+const char *userToken = "your user token";
 
 // Pushover API endpoint
 const char *pushoverApiEndpoint = "https://api.pushover.net/1/messages.json";
@@ -99,7 +99,7 @@ void loop()
   digitalWrite(LED_BUILTIN, 0);
   // Create a JSON object with notification details
   // Check the API parameters: https://pushover.net/api
-  StaticJsonDocument<512> notification;
+  JsonDocument notification;
   notification["token"] = apiToken;
   notification["user"] = userToken;
   notification["message"] = "High concentration of reactive gases detected.";
